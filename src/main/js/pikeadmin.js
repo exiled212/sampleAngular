@@ -173,5 +173,4 @@ $( document ).ready(function() {
   let app = new App();
   app.init();
   "use strict";
-  $(".nicescroll").niceScroll({cursorcolor:"#858586"});
 });

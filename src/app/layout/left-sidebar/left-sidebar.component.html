@@ -3,13 +3,19 @@
     <div id="sidebar-menu">
       <ul>
         <li class="submenu">
-          <a href="Admin/index.html"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+          <a [routerLink]="['home']" routerLinkActive="active" ><i class="fa fa-fw fa-bars"></i><span> Home </span> </a>
         </li>
         <li class="submenu">
-          <a href="#"><i class="fa fa-fw fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
+          <a [routerLink]="['dashboard']" routerLinkActive="active" ><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+        </li>
+        <li class="submenu">
+          <a [routerLink]="['charts']" routerLinkActive="active" ><i class="fa fa-fw fa-area-chart"></i><span> Charts </span> </a>
+        </li>
+        <li class="submenu" routerLinkActive="active">
+          <a class="subdrop"><i class="fa fa-fw fa-table"></i> <span> User Interface </span> <span class="menu-arrow"></span></a>
           <ul class="list-unstyled">
-            <li><a href="Admin/tables-basic.html">Basic Tables</a></li>
-            <li><a href="Admin/tables-datatable.html">Data Tables</a></li>
+            <li><a [routerLink]="['interface']" >Alerts</a></li>
+            <li><a [routerLink]="['interface']"  >Buttons</a></li>
           </ul>
         </li>
       </ul>

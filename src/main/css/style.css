@@ -451,6 +451,11 @@ body.adminbody .main-sidebar.left {
   color: #ffffff !important;
   background-color: #6194c1; }
 
+#sidebar-menu > ul > li.active.submenu > a {
+  color: #ffffff !important;
+  background-color: #6194c1;
+}
+
 .menu-title {
   padding: 12px 20px !important;
   letter-spacing: .035em;

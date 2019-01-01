@@ -26,6 +26,7 @@
               "src/main/plugins/switchery/switchery.min.css",
               "src/main/css/bootstrap.min.css",
               "src/main/plugins/font-awesome/css/font-awesome.css",
+              "src/main/css/dataTables.bootstrap4.min.css",
               "src/main/css/style.css"
             ],
             "scripts": [
@@ -39,9 +40,12 @@
               "src/main/js/detect.js",
               "src/main/js/fastclick.js",
               "src/main/js/jquery.blockUI.js",
-              "src/main/js/jquery.nicescroll.js",
               "src/main/js/jquery.scrollTo.min.js",
               "src/main/plugins/switchery/switchery.min.js",
+
+              "src/main/js/jquery.dataTables.min.js",
+              "src/main/js/dataTables.bootstrap4.min.js",
+              "src/main/js/jquery.waypoints.min.js",
 
               "src/main/js/pikeadmin.js"
             ]
