@@ -4,7 +4,7 @@ import { TaskInterface } from 'src/app/interface/TaskInterface';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskServiceService {
+export class TaskService {
 
   private data: TaskInterface[];
 

@@ -15,6 +15,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { AppService } from './services/app.service';
 import { ChartsComponent } from './modules/charts/charts.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { BasicTablesComponent } from './modules/basic-tables/basic-tables.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
     FooterComponent,
     HomeComponent,
     ChartsComponent,
-    DashboardComponent
+    DashboardComponent,
+    BasicTablesComponent
   ],
   imports: [
     BrowserModule,

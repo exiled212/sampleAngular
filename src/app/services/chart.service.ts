@@ -5,7 +5,7 @@ import { Chart } from 'src/main/js/Chart.min.js';
 @Injectable({
   providedIn: 'root'
 })
-export class ChartServiceService {
+export class ChartService {
   private chartCtx: HTMLCanvasElement;
   private chartData: ChartInterface;
 

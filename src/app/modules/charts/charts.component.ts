@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ChartServiceService } from 'src/app/services/chart-service.service';
+import { ChartService } from 'src/app/services/chart.service';
 
 @Component({
   selector: 'app-charts',
@@ -9,7 +9,7 @@ import { ChartServiceService } from 'src/app/services/chart-service.service';
 })
 export class ChartsComponent implements OnInit {
 
-  constructor( private _chartServiceService: ChartServiceService ) { }
+  constructor( private _chartServiceService: ChartService ) { }
 
   ngOnInit() {
     this._chartServiceService.getChat('barChart');

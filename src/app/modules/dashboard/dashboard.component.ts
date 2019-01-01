@@ -4,8 +4,8 @@ import { MessageInterface } from 'src/app/interface/MessageInterface';
 import { TaskInterface } from 'src/app/interface/TaskInterface';
 
 import { UserMessageService } from 'src/app/services/user-message.service';
-import { ChartServiceService } from 'src/app/services/chart-service.service';
-import { TaskServiceService } from 'src/app/services/task-service.service';
+import { ChartService } from 'src/app/services/chart.service';
+import { TaskService } from 'src/app/services/task.service';
 import { StaffService } from 'src/app/services/staff.service';
 
 @Component({
@@ -21,8 +21,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private _userMessageService: UserMessageService,
-    private _chartServiceService: ChartServiceService,
-    private _taskServiceService: TaskServiceService,
+    private _chartServiceService: ChartService,
+    private _taskServiceService: TaskService,
     private _staffService: StaffService
   ) {
   }
