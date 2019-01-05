@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { DataTablesModule } from 'angular-datatables';
 
@@ -16,6 +18,8 @@ import { AppService } from './services/app.service';
 import { ChartsComponent } from './modules/charts/charts.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BasicTablesComponent } from './modules/basic-tables/basic-tables.component';
+import { LoginComponent } from './layout/login/login.component';
+import {UserService} from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -27,15 +31,19 @@ import { BasicTablesComponent } from './modules/basic-tables/basic-tables.compon
     HomeComponent,
     ChartsComponent,
     DashboardComponent,
-    BasicTablesComponent
+    BasicTablesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
     DataTablesModule
   ],
   providers: [
-    AppService
+    AppService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
