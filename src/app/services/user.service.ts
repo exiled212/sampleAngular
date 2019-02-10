@@ -23,7 +23,6 @@ export class UserService {
   }
 
   public login() {
-
     this.http.post('http://127.0.0.1:3000/login', this.user).toPromise().then((result: any) => {
       localStorage.setItem('token', result.token);
       localStorage.setItem('auth', result.user);
@@ -32,4 +31,22 @@ export class UserService {
     });
   }
 
+  public userList(callback) {
+    this.http.get('http://127.0.0.1:3000/person').toPromise()
+      .then((result: any) => {
+        callback(null, result);
+      }).catch((error) => {
+        callback(error, null);
+      });
+  }
+
+  public create(data, callback) {
+    console.log(data);
+    this.http.post('http://127.0.0.1:3000/person', data).toPromise()
+      .then((result: any) => {
+        callback(null);
+      }).catch((error) => {
+      callback(error);
+    });
+  }
 }

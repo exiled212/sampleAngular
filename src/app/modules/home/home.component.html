@@ -1,3 +1,41 @@
-<p>
-  home works!
-</p>
+<div class="row">
+  <div class="col-md">
+    <form (ngSubmit)="create(form)" #form="ngForm">
+      <div class="row">
+        <div class="col-md">
+          <label>Nombres:</label>
+          <input name="name" type="text" class="form-control" [(ngModel)]="newUser.name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <label>Apellidos:</label>
+          <input name="lastname" type="text" class="form-control" [(ngModel)]="newUser.lastname">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <label>Correo:</label>
+          <input name="email" type="email" class="form-control" [(ngModel)]="newUser.email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <label>password:</label>
+          <input name="password" type="password" class="form-control" [(ngModel)]="newUser.password">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <button type="submit" class="btn btn-info">Crear</button>
+          <button type="button" (click)="clearForm(form)" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md">
+    <ul>
+      <li *ngFor="let user of users">{{user.name}} - {{user.lastname}} - {{user.email}}</li>
+    </ul>
+  </div>
+</div>
