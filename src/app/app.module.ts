@@ -20,6 +20,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BasicTablesComponent } from './modules/basic-tables/basic-tables.component';
 import { LoginComponent } from './layout/login/login.component';
 import {UserService} from './services/user.service';
+import { AcountComponent } from './modules/acount/acount.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {UserService} from './services/user.service';
     ChartsComponent,
     DashboardComponent,
     BasicTablesComponent,
-    LoginComponent
+    LoginComponent,
+    AcountComponent
   ],
   imports: [
     BrowserModule,

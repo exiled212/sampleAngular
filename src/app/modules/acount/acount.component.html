@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <select name="user" class="form-control">
+      <option *ngFor="let user of users" value="{{user.id}}">{{user.name}} - {{user.lastname}} ({{user.email}}) </option>
+    </select>
+  </div>
+</div>

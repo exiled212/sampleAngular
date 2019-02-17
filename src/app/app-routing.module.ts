@@ -11,6 +11,7 @@ import { LoginComponent } from 'src/app/layout/login/login.component';
 
 import { BasicTablesComponent } from 'src/app/modules/basic-tables/basic-tables.component';
 
+import { AcountComponent } from 'src/app/modules/acount/acount.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'charts', component: ChartsComponent },
+  { path: 'acount', component: AcountComponent },
 
   { path: 'tables.basic', component: BasicTablesComponent },
 
