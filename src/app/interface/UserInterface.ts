@@ -1,7 +1,8 @@
 export interface UserInterface {
   id: number;
-  firstname: string;
-  lastname?: string;
-  username: string;
+  first_name: string;
+  last_name?: string;
+  email?: string;
+  username?: string;
   spaceRow?: number;
 }

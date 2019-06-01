@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {UserLogin} from '../interface/UserLogin';
+import {ResponseList} from '../interface/http/Response.List';
+import {UserInterface} from '../interface/UserInterface';
+import {ResponseLogin} from '../interface/http/Response.Login';
+import {ResponseCreate} from '../interface/http/Response.Create';
 
 @Injectable({
   providedIn: 'root'
@@ -23,18 +27,17 @@ export class UserService {
   }
 
   public login() {
-    this.http.post('http://127.0.0.1:3000/login', this.user).toPromise().then((result: any) => {
-      localStorage.setItem('token', result.token);
-      localStorage.setItem('auth', result.user);
+    this.http.post('https://reqres.in/api/login', this.user).toPromise().then((response: ResponseLogin) => {
+      localStorage.setItem('token', response.token);
     }).catch((error) => {
       console.log(error);
     });
   }
 
   public userList(callback) {
-    this.http.get('http://127.0.0.1:3000/person').toPromise()
-      .then((result: any) => {
-        callback(null, result);
+    this.http.get('https://reqres.in/api/users').toPromise()
+      .then((response: ResponseList) => {
+        callback(null, response);
       }).catch((error) => {
         callback(error, null);
       });
@@ -42,11 +45,11 @@ export class UserService {
 
   public create(data, callback) {
     console.log(data);
-    this.http.post('http://127.0.0.1:3000/person', data).toPromise()
-      .then((result: any) => {
-        callback(null);
+    this.http.post('https://reqres.in/api/users', data).toPromise()
+      .then((response: ResponseCreate) => {
+        callback(null, response);
       }).catch((error) => {
-      callback(error);
+        callback(error);
     });
   }
 }

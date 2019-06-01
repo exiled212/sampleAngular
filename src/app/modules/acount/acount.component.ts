@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import {UserInterface} from '../../interface/UserInterface';
+import {ResponseList} from '../../interface/http/Response.List';
 
 @Component({
   selector: 'app-acount',
@@ -8,7 +9,7 @@ import {UserInterface} from '../../interface/UserInterface';
 })
 export class AcountComponent implements OnInit {
 
-  public users: UserInterface[];
+  public users: UserInterface[] = [];
 
   private userService: UserService;
 
@@ -18,10 +19,12 @@ export class AcountComponent implements OnInit {
 
   ngOnInit() {
 
-    this.userService.userList((users: UserInterface[]) => {
-      this.users = users;
+    this.userService.userList((error, response: ResponseList) => {
+      if (error) {
+        console.log(error);
+      } else {
+        this.users = response.data as UserInterface[];
+      }
     });
-
   }
-
 }

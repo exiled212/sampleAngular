@@ -9,12 +9,6 @@
       </div>
       <div class="row">
         <div class="col-md">
-          <label>Apellidos:</label>
-          <input name="lastname" type="text" class="form-control" [(ngModel)]="newUser.lastname">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md">
           <label>Correo:</label>
           <input name="email" type="email" class="form-control" [(ngModel)]="newUser.email">
         </div>
@@ -35,7 +29,7 @@
   </div>
   <div class="col-md">
     <ul>
-      <li *ngFor="let user of users">{{user.name}} - {{user.lastname}} - {{user.email}}</li>
+      <li *ngFor="let user of users">{{user.first_name}} {{user.last_name}} - {{user.email}}</li>
     </ul>
   </div>
 </div>

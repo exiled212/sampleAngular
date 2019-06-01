@@ -33,9 +33,9 @@
           <tbody>
             <tr *ngFor="let user of users">
               <th scope="row">{{user.id}}</th>
-              <td>{{user.firstname}}</td>
-              <td>{{user.lastname}}</td>
-              <td>{{user.username}}</td>
+              <td>{{user.first_name}}</td>
+              <td>{{user.last_name}}</td>
+              <td>{{user.email}}</td>
             </tr>
           </tbody>
         </table>
@@ -64,9 +64,9 @@
           <tbody>
           <tr *ngFor="let user of users">
             <th scope="row">{{user.id}}</th>
-            <td>{{user.firstname}}</td>
-            <td>{{user.lastname}}</td>
-            <td>{{user.username}}</td>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+            <td>{{user.email}}</td>
           </tr>
           </tbody>
         </table>
@@ -99,9 +99,9 @@
           <tbody>
             <tr *ngFor="let user of users">
               <th scope="row">{{user.id}}</th>
-              <td [colSpan]="user.spaceRow">{{user.firstname}}</td>
-              <td *ngIf="user.lastname">{{user.lastname}}</td>
-              <td>{{user.username}}</td>
+              <td>{{user.first_name}}</td>
+              <td>{{user.last_name}}</td>
+              <td>{{user.email}}</td>
             </tr>
           </tbody>
         </table>
@@ -131,9 +131,9 @@
           <tbody>
             <tr *ngFor="let user of users">
               <th scope="row">{{user.id}}</th>
-              <td [colSpan]="user.spaceRow">{{user.firstname}}</td>
-              <td *ngIf="user.lastname">{{user.lastname}}</td>
-              <td>{{user.username}}</td>
+              <td>{{user.first_name}}</td>
+              <td>{{user.last_name}}</td>
+              <td>{{user.email}}</td>
             </tr>
           </tbody>
         </table>

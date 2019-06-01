@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-
-import { TablesService } from 'src/app/services/tables.service';
-import { UserInterface } from 'src/app/interface/UserInterface';
+import {Component, OnInit} from '@angular/core';
+import {UserInterface} from 'src/app/interface/UserInterface';
+import {ResponseList} from '../../interface/http/Response.List';
+import {UserService} from '../../services/user.service';
 
 @Component({
   selector: 'app-basic-tables',
@@ -11,10 +11,17 @@ export class BasicTablesComponent implements OnInit {
 
   private users: UserInterface[];
 
-  constructor(private _tablesService: TablesService) { }
+  constructor(private userService: UserService) {
+  }
 
-  ngOnInit() {
-    this.users = this._tablesService.getAll();
+  async ngOnInit() {
+    this.userService.userList((error, response: ResponseList) => {
+      if (error) {
+        console.log(error);
+      } else {
+        this.users = response.data as UserInterface[];
+      }
+    });
   }
 
 }
